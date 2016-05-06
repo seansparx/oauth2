@@ -1,0 +1,19 @@
+1. http://localhost/oauth2/authorize.php?response_type=code&client_id=testclient&state=abc
+
+Output like : SUCCESS! Authorization Code: 2d663db8e8f3fac9de78e15aa9db1c04cbca21e0
+
+
+2. curl -u testclient:testpass http://localhost/oauth2/token.php -d 'grant_type=authorization_code&code=AUTHORIZATION_CODE'
+
+Output : {"access_token":"fbc1245cc3fb46fa0c8b0b0dc7b09015daf5890c","expires_in":360,"token_type":"","scope":"","refresh_token":""}
+
+
+3. curl http://localhost/resource.php -d 'access_token=YOUR_ACCESS_TOKEN'
+
+If all goes well, you should receive a response like this:
+{"success":true,"message":"You accessed my APIs! User ID associated with this token is U0012"}
+
+
+
+
+Ref url : http://bshaffer.github.io/oauth2-server-php-docs/cookbook/
