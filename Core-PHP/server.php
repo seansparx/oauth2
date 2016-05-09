@@ -1,7 +1,7 @@
 <?php 
     $dsn = 'mysql:dbname=oauth2;host=localhost';
     $username = 'root';
-    $password = '#$5L479211420840';
+    $password = 'sparx';
 
     // error reporting (this is a demo, after all!)
     ini_set('display_errors', 1);
