@@ -91,6 +91,7 @@ class Api extends CI_Controller {
         if ($is_authorized) {
             // this is only here so that you get to see your code in the cURL request. Otherwise, we'd redirect back to the client
             $code = substr($response->getHttpHeader('Location'), strpos($response->getHttpHeader('Location'), 'code=') + 5, 40);
+            //print_r($response);
             exit($code);
         }
 
